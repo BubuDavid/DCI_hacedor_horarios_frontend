@@ -1,0 +1,14 @@
+.LeftSection {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: blue;
+	padding: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+	.LeftSection {
+		width: 100%;
+	}
+}

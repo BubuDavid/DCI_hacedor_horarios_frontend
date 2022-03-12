@@ -1,0 +1,15 @@
+.RightSection {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: red;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+	.RightSection {
+		width: 100%;
+	}
+}
