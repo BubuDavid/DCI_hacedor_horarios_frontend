@@ -8,17 +8,15 @@ function SubjectItem({ subject }) {
 		toggleSelectSubject
 	} = useContext(HHContext)
 	
-	const opacityBee = {
-		opacity: subject.selected ? '1' : '0'
-	}
 	return (
 		<li
 			className='SubjectItem'
 			onClick={() => toggleSelectSubject(subject._ID)}
 		>
 			<span
-				className='IconContainer'
-				style={opacityBee}
+				className={ 
+					subject.selected ? 'IconContainer selected' : 'IconContainer'
+				}
 			>
 				🐝
 			</span>

@@ -38,8 +38,7 @@ function useCallHHAPI(setSchedules) {
 	const makeSchedules = async (url, body_request) => {
 		setScheduleLoading(true)
 		try {
-			console.log(body_request)
-			const response = await fetch(url, {
+				const response = await fetch(url, {
 				method: "POST",
 				mode:"cors",
 				headers: {
@@ -50,6 +49,7 @@ function useCallHHAPI(setSchedules) {
 			
 			const data = await response.json()
 			setSchedules(data)
+			console.log(data)
 		} catch (error) {
 			setScheduleError(error)
 		}

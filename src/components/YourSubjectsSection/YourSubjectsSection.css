@@ -1,0 +1,9 @@
+.YourSubjectsSection {
+	padding: 1rem;
+	background-color: #FFD365;
+	margin-bottom: 1rem;
+	border-radius: 0.5rem;
+	margin-left: 1rem;
+	max-height: 500px;
+	overflow-y: scroll;
+}

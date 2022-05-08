@@ -16,6 +16,7 @@
 
 .IconContainer {
 	--size: 2rem;
+	opacity: 0;
 	margin-right: 0.5rem;
 	display: inline-block;
 	display: flex;
@@ -24,6 +25,9 @@
 	width: var(--size);
 	height: var(--size);
 	padding: 0rem;
-	background-color: green;
 	font-size: 2rem;
+}
+
+.IconContainer.selected {
+	opacity: 1;
 }

@@ -23,7 +23,7 @@ function SubmitButton() {
 				makeSchedules(url, body_request)
 			}}
 			style={{
-				opacity: yourSubjects.length ? '1' : '0.8',
+				opacity: yourSubjects.length ? '1' : '0.3',
 				pointerEvents: yourSubjects.length ? 'auto' : 'none'
 			}}
 		>
