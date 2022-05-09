@@ -1,0 +1,14 @@
+.closeBtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	border-radius: 50%;
+	border: none;
+	padding: 10px;
+	text-align: center;
+
+	background-color: blue;
+
+	cursor: pointer;
+}

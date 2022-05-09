@@ -6,4 +6,6 @@
 	border: 0;
 	border-radius: 50%;
 	background-color: #FFD365;
+
+	cursor: pointer;
 }

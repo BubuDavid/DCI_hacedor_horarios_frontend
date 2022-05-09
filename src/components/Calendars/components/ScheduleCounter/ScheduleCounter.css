@@ -1,0 +1,13 @@
+.scheduleCounter {
+	padding: 1rem 1.2rem;
+	margin: 5rem 2rem 0 2rem;
+	border-radius: 50%;
+	border: none;
+
+	cursor: pointer;
+}
+
+.scheduleCounter.current {
+	background-color: blue;
+	color: white;
+}

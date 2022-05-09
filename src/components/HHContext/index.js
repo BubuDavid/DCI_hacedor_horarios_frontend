@@ -1,12 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import { useFetchAirtableData } from "./customHooks"
 
 const HHContext = React.createContext()
 
 const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY
+const AIRTABLE_TABLE_URL = process.env.REACT_APP_AIRTABLE_TABLE_URL
+
 
 const requestParams = {
-	url: "https://api.airtable.com/v0/appHZnhbBkL60GEIz/nombres_materias?sort%5B0%5D%5Bfield%5D=_ID",
+	url: AIRTABLE_TABLE_URL,
 	headers: {
 		'Authorization': `Bearer ${AIRTABLE_API_KEY}`
 	},
@@ -20,6 +22,8 @@ function HHProvider(props) {
 		loading,
 		error
 	} = useFetchAirtableData([], requestParams)
+	const [openModal, setOpenModal] = useState(false)
+	const [schedules, setSchedules] = useState([])
 
 	const toggleSelectSubject = (id) => {
 		const indexSubject = subjects.findIndex(subject => subject._ID === id)
@@ -28,6 +32,20 @@ function HHProvider(props) {
 		setSubjects(newSubjects)
 	}
 
+	subjects.forEach(subject => {
+		if (subject.NAME === "ANALISIS VECTORIAL") {
+			subject.selected = true;
+		}
+		if (subject.NAME === "DEBATES ETICOS CONTEMPORANEOS Y DERECHOS HUMANOS") {
+			subject.selected = true;
+		}
+		if (subject.NAME === "ELECTROMAGNETISMO") {
+			subject.selected = true;
+		}
+		if (subject.NAME === "FISICA CUANTICA") {
+			subject.selected = true;
+		}
+	});
 	const yourSubjects = subjects.filter(subject => subject.selected)
 
 	return (
@@ -36,7 +54,11 @@ function HHProvider(props) {
 			error,
 			subjects,
 			toggleSelectSubject,
-			yourSubjects
+			yourSubjects,
+			openModal,
+			setOpenModal,
+			schedules,
+			setSchedules
 		}}>
 			{ props.children }
 		</HHContext.Provider>

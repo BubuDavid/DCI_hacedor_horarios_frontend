@@ -7,12 +7,22 @@ function useFetchAirtableData(initialValue, requestParams) {
 
 	useEffect(() => {
 		try {
+
 			async function fetchData({ url, headers }) {
-				const response = await fetch(url, {
-					headers: headers
-				})
-				const data = await response.json()
-				const records = data.records
+				let fetching = true
+				let records = []
+				while (fetching) {
+					const response = await fetch(url, {
+						headers: headers
+					})
+					const data = await response.json()
+					records.push(...data.records)
+					if (!data.offset) fetching = false
+					else {
+						url = url.split('&offset')[0]
+						url += `&offset=${data.offset}`
+					}
+				}
 				setItem(records.map(record => record.fields))
 				setLoading(false)
 			}
@@ -30,7 +40,7 @@ function useFetchAirtableData(initialValue, requestParams) {
 	}
 }
 
-function useCallHHAPI(setSchedules) {
+function useCallHHAPI(schedules, setSchedules) {
 	// States
 	const [scheduleLoading, setScheduleLoading] = useState(false)
 	const [scheduleError, setScheduleError] = useState(false)
@@ -49,7 +59,6 @@ function useCallHHAPI(setSchedules) {
 			
 			const data = await response.json()
 			setSchedules(data)
-			console.log(data)
 		} catch (error) {
 			setScheduleError(error)
 		}

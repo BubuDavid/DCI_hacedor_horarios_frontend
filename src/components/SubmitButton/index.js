@@ -3,24 +3,31 @@ import './SubmitButton.css'
 import { HHContext } from '../HHContext'
 import { useCallHHAPI } from '../HHContext/customHooks'
 
+const fastAPIGetScheduleURL = process.env.REACT_APP_FASTAPI_API_URL_GET
+
 function SubmitButton() {
-	const { yourSubjects } = useContext(HHContext)
-	const [schedules, setSchedules] = useState([])
+	const {
+		yourSubjects,
+		openModal,
+		setOpenModal,
+		schedules,
+		setSchedules
+	} = useContext(HHContext)
 	const {
 		scheduleLoading,
 		scheduleError,
 		makeSchedules
-	} = useCallHHAPI(setSchedules)
+	} = useCallHHAPI(schedules, setSchedules)
 
 	return (
 		<button
 			className='SubmitButton'
-			onClick={() => {
-				let url = 'http://localhost:8000/get-schedule'
+			onClick={async () => {
 				let body_request = {
 					"subjects": yourSubjects.map(subject => subject.NAME)
 				}
-				makeSchedules(url, body_request)
+				await makeSchedules(fastAPIGetScheduleURL, body_request)
+				setOpenModal(true)
 			}}
 			style={{
 				opacity: yourSubjects.length ? '1' : '0.3',
