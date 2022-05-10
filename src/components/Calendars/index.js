@@ -1,49 +1,33 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
+
+import { CloseModalBtn } from './Components/CloseModalBtn'
+import { CountBtnsSection } from './Components/CountBtnsSection'
+import { Calendar } from './Components/Calendar'
+import { ConfigBtnsSection } from './Components/ConfigBtnsSection'
+import { ScheduleSummary } from './Components/ScheduleSummary'
+import { NotFoundMessage } from './Components/NotFoundMessage'
+import { CCProvider } from './Components/CalendarsContext'
 import { HHContext } from '../HHContext'
-import { CloseModalBtn } from './components/CloseModalBtn'
-import { ScheduleCounter } from './components/ScheduleCounter'
-import { Calendar } from './components/Calendar'
+
 import './Calendars.css'
 
 function Calendars() {
-	const {
-		schedules,
-		setOpenModal
-	} = useContext(HHContext)
-	const [current, setCurrent] = useState(1)
+	const { schedules } = useContext(HHContext)
 	return (
-		<>
-			<CloseModalBtn
-				setOpenModal
-			/>
-
-			{
-				// Esto tiene que ser su propia componente
-				// Por el momento le puse un div
-			}
-			<div>
-				{schedules.map((schedule, index) => {
-					index++
-					return <ScheduleCounter
-					setCurrent = {setCurrent}
-					isCurrent = {current === index}
-					index = { index }
-					key = { index }
-						/>
-				})}
-			</div>
-
-			{
-				// Esto tiene que ser su propia componente
-				// Por el momento le puse un div
-			}
-			<div>
-				<Calendar
-					schedule={schedules[current - 1]}
-					index = {current}
-				/>
-			</div>
-		</>
+		<CCProvider>
+			<CloseModalBtn />
+			{schedules.length > 0 && (
+				<>
+					<CountBtnsSection />
+					<ScheduleSummary />
+					<Calendar />
+					<ConfigBtnsSection />
+				</>
+			)}
+			{schedules.length <= 0 && (
+				<NotFoundMessage />
+			)}
+		</CCProvider>
 	)
 }
 

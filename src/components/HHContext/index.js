@@ -32,20 +32,21 @@ function HHProvider(props) {
 		setSubjects(newSubjects)
 	}
 
-	subjects.forEach(subject => {
-		if (subject.NAME === "ANALISIS VECTORIAL") {
-			subject.selected = true;
-		}
-		if (subject.NAME === "DEBATES ETICOS CONTEMPORANEOS Y DERECHOS HUMANOS") {
-			subject.selected = true;
-		}
-		if (subject.NAME === "ELECTROMAGNETISMO") {
-			subject.selected = true;
-		}
-		if (subject.NAME === "FISICA CUANTICA") {
-			subject.selected = true;
-		}
-	});
+	// // tests
+	// subjects.forEach(subject => {
+	// 	if (subject.NAME === "ANALISIS VECTORIAL") {
+	// 		subject.selected = true;
+	// 	}
+	// 	if (subject.NAME === "DEBATES ETICOS CONTEMPORANEOS Y DERECHOS HUMANOS") {
+	// 		subject.selected = true;
+	// 	}
+	// 	if (subject.NAME === "ELECTROMAGNETISMO") {
+	// 		subject.selected = true;
+	// 	}
+	// 	if (subject.NAME === "FISICA CUANTICA") {
+	// 		subject.selected = true;
+	// 	}
+	// });
 	const yourSubjects = subjects.filter(subject => subject.selected)
 
 	return (

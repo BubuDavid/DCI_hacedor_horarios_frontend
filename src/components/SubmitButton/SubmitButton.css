@@ -1,11 +1,17 @@
 .SubmitButton {
+	position: fixed;
+	bottom: 10rem;
 	padding: 1rem;
 	font-size: 1rem;
 	font-weight: 800;
 	font-family: "Poppins";
 	border: 0;
-	border-radius: 50%;
+	border-radius: 3rem;
 	background-color: #FFD365;
 
 	cursor: pointer;
+}
+
+.SubmitButton:active {
+	box-shadow: 1px 1px 1px black;
 }

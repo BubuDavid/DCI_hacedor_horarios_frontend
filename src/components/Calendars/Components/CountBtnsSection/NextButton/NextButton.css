@@ -1,0 +1,17 @@
+.NextButton.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.NextButton {
+	border-radius: 50%;
+	border: none;
+	padding: 1rem;
+	background-color: blue;
+	cursor: pointer;
+}
+
+.NextButton:active {
+	opacity: 0.9;
+	box-shadow: 1px 1px 1px darkblue;
+}

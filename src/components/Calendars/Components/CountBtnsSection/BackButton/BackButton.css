@@ -1,0 +1,17 @@
+.BackButton.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.BackButton {
+	border-radius: 50%;
+	border: none;
+	padding: 1rem;
+	background-color: blue;
+	cursor: pointer;
+}
+
+.BackButton:active {
+	opacity: 0.9;
+	box-shadow: 1px 1px 1px darkblue;
+}

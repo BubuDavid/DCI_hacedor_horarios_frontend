@@ -1,9 +1,16 @@
 .YourSubjectsSection {
+	position: fixed;
 	padding: 1rem;
 	background-color: #FFD365;
 	margin-bottom: 1rem;
 	border-radius: 0.5rem;
 	margin-left: 1rem;
-	max-height: 500px;
+	min-height: 300px;
+	width: 40%;
+	max-height: 400px;
 	overflow-y: scroll;
+}
+
+.YourSubjectsSection__Header {
+	text-align: center;
 }

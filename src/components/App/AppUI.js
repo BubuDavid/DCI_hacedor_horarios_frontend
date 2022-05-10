@@ -18,14 +18,19 @@ function AppUI() {
 	
 	return (
 		<React.Fragment>
-			<LeftSection>
-				<Header />
-				<SubjectsSection />
-			</LeftSection>
-			<RightSection>
-				<YourSubjectsSection />
-				<SubmitButton />
-			</RightSection>
+			{!openModal && (
+				<>
+				<LeftSection>
+					<Header />
+					<SubjectsSection />
+				</LeftSection>
+				<RightSection>
+					<YourSubjectsSection />
+					<SubmitButton />
+				</RightSection>
+				</>
+			)
+			}
 
 			{openModal && (
 				<Modal>

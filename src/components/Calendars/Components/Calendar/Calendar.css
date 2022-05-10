@@ -1,0 +1,19 @@
+.Calendar {
+	margin-top: 2rem;
+	width: 70vw;
+	border-spacing: 0;
+}
+
+.Calendar th, .Calendar td {
+	text-align: center;
+	vertical-align: center;
+
+	border: 1px solid blue;
+	height: 2rem;
+	width: 5rem;
+}
+
+.Calendar .CalendarHour, .Calendar th:nth-child(1) {
+	text-align: end;
+	padding-right: 0.3rem;
+}

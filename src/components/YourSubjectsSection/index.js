@@ -12,7 +12,7 @@ function YourSubjectsSection() {
 	return (
 		<div className='YourSubjectsSection'>
 			<h2 className='YourSubjectsSection__Header'>
-				Materias Enero-Junio
+				Tus Materias para Enero-Junio
 			</h2>
 
 			<SubjectList>
