@@ -5,12 +5,16 @@ import './CloseModalBtn.css'
 function CloseModalBtn() {
 	const {
 		openModal,
-		setOpenModal
+		setOpenModal,
+		setSchedules
 	} = useContext(HHContext)
 	return (
 		<button
 				className='closeBtn'
-				onClick={() => setOpenModal(!openModal)}
+			onClick={() => {
+				setOpenModal(!openModal)
+				setSchedules([])
+			}}
 			>
 				Regresar 👈
 			</button>

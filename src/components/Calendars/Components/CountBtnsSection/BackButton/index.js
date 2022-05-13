@@ -10,16 +10,11 @@ function BackButton() {
 		setCurrentFixed
 	} = useContext(CCContext)
 
-	const {
-		setSchedules
-	} = useContext(HHContext)
-
 	return (
 		<button 
 			className= {current === 1 ? 'BackButton disabled' : 'BackButton'}
 			onClick={() => {
 				setCurrentFixed(current - 1)
-				setSchedules([])
 			}}
 		>
 			👈
