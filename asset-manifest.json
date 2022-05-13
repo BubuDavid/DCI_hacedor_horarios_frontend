@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hacedor_de_horarios_frontend/static/css/main.701b4dd5.css",
+    "main.js": "/hacedor_de_horarios_frontend/static/js/main.5924ce52.js",
+    "index.html": "/hacedor_de_horarios_frontend/index.html",
+    "main.701b4dd5.css.map": "/hacedor_de_horarios_frontend/static/css/main.701b4dd5.css.map",
+    "main.5924ce52.js.map": "/hacedor_de_horarios_frontend/static/js/main.5924ce52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.701b4dd5.css",
+    "static/js/main.5924ce52.js"
+  ]
+}
