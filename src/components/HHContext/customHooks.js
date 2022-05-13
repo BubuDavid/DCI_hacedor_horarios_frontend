@@ -52,7 +52,8 @@ function useCallHHAPI(schedules, setSchedules) {
 				method: "POST",
 				mode:"cors",
 				headers: {
-					"Content-type": "application/json"
+					"Content-type": "application/json",
+					'Accept': 'application/json'
 				},
 				body: JSON.stringify(body_request)
 			})

@@ -10,7 +10,9 @@ const AIRTABLE_TABLE_URL = process.env.REACT_APP_AIRTABLE_TABLE_URL
 const requestParams = {
 	url: AIRTABLE_TABLE_URL,
 	headers: {
-		'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+		'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+		'Content-Type': 'application/json',
+		'Accept': 'application/json',
 	},
 	method: 'GET'
 }
