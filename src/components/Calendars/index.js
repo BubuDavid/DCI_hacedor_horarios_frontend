@@ -10,6 +10,7 @@ import { CCProvider } from './Components/CalendarsContext'
 import { HHContext } from '../HHContext'
 
 import './Calendars.css'
+import { Footer } from '../Footer'
 
 function Calendars() {
 	const { schedules } = useContext(HHContext)
@@ -21,12 +22,14 @@ function Calendars() {
 					<CountBtnsSection />
 					<ScheduleSummary />
 					<Calendar />
-					<ConfigBtnsSection />
+					{/* <ConfigBtnsSection /> */}
 				</>
 			)}
 			{schedules.length <= 0 && (
 				<NotFoundMessage />
 			)}
+
+			<Footer />
 		</CCProvider>
 	)
 }

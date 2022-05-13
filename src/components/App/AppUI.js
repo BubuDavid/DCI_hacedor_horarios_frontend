@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { useState } from 'react'
 import { LeftSection } from '../LeftSection'
 import { RightSection } from '../RightSection'
 import { Header } from '../Header'
 import { SubjectsSection } from '../SubjectsSection'
+import { Footer } from '../Footer'
 import { YourSubjectsSection } from '../YourSubjectsSection'
 import { SubmitButton } from '../SubmitButton'
 import { Modal } from '../Modal'
@@ -12,8 +12,7 @@ import { HHContext } from '../HHContext'
 
 function AppUI() {
 	const {
-		openModal,
-		setOpenModal
+		openModal
 	} = useContext(HHContext)
 	
 	return (
@@ -36,8 +35,9 @@ function AppUI() {
 				<Modal>
 					<Calendars />
 				</Modal>
-			)
-			}
+			)}
+			<Footer
+				active={true} />
 		</React.Fragment>
 	)
 }

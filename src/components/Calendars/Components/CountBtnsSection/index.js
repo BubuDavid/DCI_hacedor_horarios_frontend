@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import { BackButton } from './BackButton'
 import { NextButton } from './NextButton'
 import { CurrentButton } from './CurrentButton'

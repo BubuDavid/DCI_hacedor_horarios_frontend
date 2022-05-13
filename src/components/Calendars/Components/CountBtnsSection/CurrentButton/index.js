@@ -5,8 +5,7 @@ import './CurrentButton.css'
 function CurrentButton() {
 	// Use Context
 	const {
-		current,
-		setCurrentFixed
+		current
 	} = useContext(CCContext)
 
 	return (

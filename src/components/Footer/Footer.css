@@ -1,0 +1,16 @@
+.Footer {
+	position: absolute;
+	bottom: 5px;
+	right: 2rem;
+	color: gray;
+}
+
+.Footer.active {
+	position: fixed;
+}
+
+.Footer a {
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
+}

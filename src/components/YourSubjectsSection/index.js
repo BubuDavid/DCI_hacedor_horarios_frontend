@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import "./YourSubjectsSection.css"
 import { HHContext } from "../HHContext"
 import { SubjectItem } from "../SubjectItem"

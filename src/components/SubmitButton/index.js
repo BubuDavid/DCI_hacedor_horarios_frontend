@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import './SubmitButton.css'
 import { HHContext } from '../HHContext'
 import { useCallHHAPI } from '../HHContext/customHooks'
@@ -8,14 +8,11 @@ const fastAPIGetScheduleURL = process.env.REACT_APP_FASTAPI_API_URL_GET
 function SubmitButton() {
 	const {
 		yourSubjects,
-		openModal,
 		setOpenModal,
 		schedules,
 		setSchedules
 	} = useContext(HHContext)
 	const {
-		scheduleLoading,
-		scheduleError,
 		makeSchedules
 	} = useCallHHAPI(schedules, setSchedules)
 

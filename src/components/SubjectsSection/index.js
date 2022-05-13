@@ -13,18 +13,29 @@ function SubjectsSection() {
 	} = useContext(HHContext)
 	return (
 		<div className='SubjectsSection'>
-			<h2 className='SubjectsSection__Header'>
-				Materias Enero-Junio
-			</h2>
-
-			<SubjectList>
-				{subjects.map(subject => (
-					<SubjectItem
-						subject={subject}
-						key={subject._ID}
-					/>
-				))}
-			</SubjectList>
+			{(loading && !error) && (
+				<h2>No desespereis, estamos cargando! 😇</h2>
+			)}
+			{(!loading && !error) && (
+				<>
+					<h2 className='SubjectsSection__Header'>
+						Materias Enero-Junio
+					</h2>
+					<SubjectList>
+						{subjects.map(subject => (
+							<SubjectItem
+								subject={subject}
+								key={subject._ID}
+							/>
+						))}
+					</SubjectList>
+				</>
+			)}
+			{error && (
+				<>
+					<h2>Oh no! Ocurrió un errro! Pánico 🤯 { console.log(error) }</h2>
+				</>
+			)}
 		</div>
 	)
 }

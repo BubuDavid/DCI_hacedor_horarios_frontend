@@ -1,5 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
-import {HHContext} from '../../../HHContext'
+import { useState, useEffect } from 'react'
 
 
 function getWindowDimensions() {
