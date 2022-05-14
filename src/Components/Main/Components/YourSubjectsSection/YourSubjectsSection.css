@@ -43,3 +43,15 @@
 .MakeSchedulesBtn:hover {
 	transform: scale(1.03);
 }
+
+.YourSubjectList {
+	width: 100%;
+}
+
+.YourSubjectList .SubjectP{
+	font-size: 0.7rem;
+}
+
+.YourSubjectList .SubjectIcon{
+	font-size: 1rem;
+}

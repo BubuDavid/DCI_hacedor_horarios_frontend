@@ -23,6 +23,8 @@
 	background-color: #001E6C;
 	color: white;
 	opacity: 1;
+	animation: pop;
+	animation-duration: 0.5s;
 }
 
 .Subject:hover {

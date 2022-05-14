@@ -36,7 +36,7 @@ export default function Main() {
 					<li>Tus materias aparecerán mágicamente de este lado cuando las escojas.</li>
 					<li>Si vuelves a dar click en ellas se eliminarán de tu lista de materias.</li>
 					<li>Nota: Es posible que no no existan horarios para la combinación de materias que escogiste. </li>
-					<li>No puedes cargar más de 10 materias, ¿estás loco esponja?</li>
+					<li><b>No puedes cargar más de 10 materias, ¿estás loco esponja?</b></li>
 				</UnorderedList>
 				<YourSubjectsSection />
 			</RightSection>

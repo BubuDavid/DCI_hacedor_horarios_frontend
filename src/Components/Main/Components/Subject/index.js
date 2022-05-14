@@ -6,7 +6,6 @@ import './Subject.css'
 export default function Subject({ subject }) {
 	const {
 		toggleSelectSubject,
-		overflowSubjects,
 		setOverflowSubjects,
 	} = useContext(HHContext)
 	const [overflowAnimation, setOverflowAnimation] = useState(false)
