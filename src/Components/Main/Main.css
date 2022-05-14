@@ -1,0 +1,17 @@
+.Main {
+	display: flex;
+}
+
+.Section {
+	width: 50%;
+	min-height: calc(100vh - 4rem);
+	padding: 0.5rem 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-bottom: 2rem;
+
+	/* Testing */
+	/* background-color: lightgray;
+	border-right: 1px solid black; */
+}
