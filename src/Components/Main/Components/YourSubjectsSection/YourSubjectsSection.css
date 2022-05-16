@@ -27,15 +27,15 @@
 }
 
 .YourSubjectList {
-	width: 100%;
+	width: 50%;
 }
 
 .YourSubjectList .SubjectP{
-	font-size: 0.7rem;
+	font-size: 1rem;
 }
 
 .YourSubjectList .SubjectIcon{
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -54,6 +54,10 @@
 
 	.YourSubjectList .SubjectIcon {
 		font-size: 1.6rem;
+	}
+
+	.YourSubjectList {
+		width: 100%;
 	}
 }
 

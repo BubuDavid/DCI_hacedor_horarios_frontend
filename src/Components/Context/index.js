@@ -40,26 +40,23 @@ function HHProvider(props) {
 
 		return true
 	}
-
-	// // tests
-	// subjects.forEach(subject => {
-		// 	if (subject.NAME === "ANALISIS VECTORIAL") {
-			// 		subject.selected = true;
-	// 	}
-	// 	if (subject.NAME === "DEBATES ETICOS CONTEMPORANEOS Y DERECHOS HUMANOS") {
-	// 		subject.selected = true;
-	// 	}
-	// 	if (subject.NAME === "ELECTROMAGNETISMO") {
-		// 		subject.selected = true;
-	// 	}
-	// 	if (subject.NAME === "FISICA CUANTICA") {
-		// 		subject.selected = true;
-		// 	}
-		// });
 	const yourSubjects = subjects.filter(subject => subject.selected)
 
 	const superNormalize = (s) => {
 		return s.normalize('NFC').toUpperCase()
+	}
+
+	const toggleView = (viewClassName) => {
+		const rightSection = document.getElementById('RightSection')
+		const leftSection = document.getElementById('LeftSection')
+		if (viewClassName === 'L') {
+			leftSection.classList.add('active')
+			rightSection.classList.remove('active')
+		}
+		if (viewClassName === 'R') {
+			leftSection.classList.remove('active')
+			rightSection.classList.add('active')
+		}
 	}
 	
 	return (
@@ -77,7 +74,8 @@ function HHProvider(props) {
 			setSchedules,
 			superNormalize,
 			overflowSubjects,
-			setOverflowSubjects
+			setOverflowSubjects,
+			toggleView
 		}}>
 			{ props.children }
 		</HHContext.Provider>

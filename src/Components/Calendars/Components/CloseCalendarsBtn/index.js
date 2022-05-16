@@ -6,7 +6,8 @@ import './CloseCalendarsBtn.css'
 export default function CloseCalendarsBtn() {
 	const {
 		setOpenModal,
-		setSchedules
+		setSchedules,
+		setSubjectName
 	} = useContext(HHContext)
 	return (
 		<button
@@ -14,6 +15,7 @@ export default function CloseCalendarsBtn() {
 			onClick={() => {
 				setOpenModal(false)
 				setSchedules([])
+				setSubjectName("")
 			}}
 		>
 			<span>🙈</span><p>REGRESAR</p>

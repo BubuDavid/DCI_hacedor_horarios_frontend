@@ -6,8 +6,11 @@ import RightSection from './Components/RightSection'
 import SearchBar from './Components/SearchBar'
 import SubjectList from './Components/SubjectList'
 import YourSubjectsSection from './Components/YourSubjectsSection'
+import ViewYourSubjectsBtn from './Components/ViewYourSubjectsBtn'
+import AllSubjectBtn from './Components/AllSubjectBtn'
 
 import './Main.css'
+import BeesCounter from './Components/YourSubjectsSection/BeesCounter'
 
 export default function Main() {
 	return (
@@ -26,9 +29,14 @@ export default function Main() {
 					<li>4. Espera y ¡Observa la magia! Ahora tienes tus posibles horarios.</li>
 				</UnorderedList>
 				<SearchBar />
+				<div className='SubjectCounterSection'>
+					<BeesCounter />
+					<ViewYourSubjectsBtn />
+				</div>
 				<SubjectList />
 			</LeftSection>
 			<RightSection>
+				<AllSubjectBtn />
 				<SectionTitle>
 						👇 Tus Materias 👇
 				</SectionTitle>

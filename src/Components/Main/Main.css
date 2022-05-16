@@ -12,6 +12,10 @@
 	margin-bottom: 2rem;
 }
 
+.SubjectCounterSection {
+	display: none;
+}
+
 /* Phone Large */
 @media only screen and (max-width: 750px) {
 	.Main {
@@ -20,5 +24,32 @@
 
 	.Section {
 		width: 100%;
+	}
+
+	.SubjectCounterSection {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1rem;
+	}
+	
+	.SubjectCounterSection .BeesCounter {
+		margin-right: 2rem;
+	}
+	
+	.SubjectCounterSection .BeesCounterIcon {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 590px) {
+	.SubjectCounterSection .BeesCounterIcon {
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.SubjectCounterSection .BeesCounterIcon {
+		font-size: 1rem;
 	}
 }

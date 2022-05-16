@@ -23,7 +23,8 @@
 
 .weekDays {
 	display: grid;
-	background-color: lightblue;
+	background-color: #001E6C;
+	color: white;
 	text-align: center;
 	position: relative;
 }
@@ -38,16 +39,16 @@
 }
 
 .weekDays li {
-	border: 1px solid darkblue;
+	border: 1px solid lightblue;
 }
 
 .header {
-	background-color: gray;
+	background-color: lightblue;
 	grid-area: header;
 }
 
 .timeSlotsContainer {
-	background-color: lightgray;
+	background-color: lightblue;
 	grid-area: timeslotsContainer;
 	justify-content: left;
 }
@@ -69,7 +70,7 @@
   left: 100%;
   width: calc(80vw - 100%);
   height: 1px;
-  background: #afafaf;
+  background: lightblue;
   z-index: 1;
 }
 
@@ -115,3 +116,4 @@
 .eventRoom {
 	font-weight: normal;
 }
+

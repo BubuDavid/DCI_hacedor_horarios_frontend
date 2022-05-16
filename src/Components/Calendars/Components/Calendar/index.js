@@ -34,7 +34,7 @@ export default function Calendar() {
 				>
 					{weekDays.map((day, key) => (
 						<li key={key}>
-							{day}
+							{day[0]}
 						</li>
 					))}
 				</ul>
