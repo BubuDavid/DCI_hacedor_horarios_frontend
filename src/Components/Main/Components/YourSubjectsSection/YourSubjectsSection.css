@@ -26,24 +26,6 @@
   animation-duration: .5s;
 }
 
-.MakeSchedulesBtn {
-	margin: 1rem;
-	padding: 1rem;
-	font-weight: bold;
-	color: white;
-	border: none;
-	font-size: 2rem;
-	background-color: #FFC900;
-	border-radius: 10px;
-	cursor: pointer;
-
-	transition: all 300ms ease-in-out;
-}
-
-.MakeSchedulesBtn:hover {
-	transform: scale(1.03);
-}
-
 .YourSubjectList {
 	width: 100%;
 }
@@ -54,4 +36,35 @@
 
 .YourSubjectList .SubjectIcon{
 	font-size: 1rem;
+}
+
+@media only screen and (max-width: 750px) {
+	.YourSubjectsSection {
+		position: relative;
+		top: 0;
+		margin-top: 0;
+	}
+	.BeesCounterIcon {
+		font-size: 2rem;
+	}
+
+	.YourSubjectList .SubjectP {
+		font-size: 0.8rem;
+	}
+
+	.YourSubjectList .SubjectIcon {
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.BeesCounterIcon {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.BeesCounterIcon {
+		font-size: 1rem;
+	}
 }

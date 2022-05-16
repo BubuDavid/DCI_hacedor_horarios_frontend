@@ -92,3 +92,12 @@
     timing-function: ease-in;
   }
 }
+
+@media only screen and (max-width: 750px) {
+	.SubjectP {
+		font-size: 0.8rem;
+	}
+	.SubjectIcon {
+		font-size: 1.6rem;
+	}
+}

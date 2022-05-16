@@ -10,8 +10,15 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	margin-bottom: 2rem;
+}
 
-	/* Testing */
-	/* background-color: lightgray;
-	border-right: 1px solid black; */
+/* Phone Large */
+@media only screen and (max-width: 750px) {
+	.Main {
+		flex-direction: column;
+	}
+
+	.Section {
+		width: 100%;
+	}
 }

@@ -9,3 +9,15 @@
 	color: white;
 	font-weight: bold;
 }
+
+@media only screen and (max-width: 750px) {
+	.Header {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.Header {
+		font-size: 1rem;
+	}
+}

@@ -6,7 +6,6 @@ export default function YourSubjectsList() {
 	const {
 		yourSubjects
 	} = useContext(HHContext)
-	console.log(yourSubjects)
 	return (
 		<div
 			className="YourSubjectList"

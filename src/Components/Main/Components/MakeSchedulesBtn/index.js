@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { useCallHHAPI } from "../../../Context/customHooks"
 import HHContext from "../../../Context"
 
+import './MakeSchedulesBtn.css'
+
 const fastAPIGetScheduleURL = process.env.REACT_APP_FASTAPI_API_URL_GET
 
 export default function MakeSchedulesBtn() {
