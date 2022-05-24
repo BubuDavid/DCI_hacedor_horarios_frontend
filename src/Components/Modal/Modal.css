@@ -4,8 +4,8 @@
 }
 
 .ModalBackground {
-	width: 100vw;
 	min-height: calc(100% - 4rem);
+	width: 100vw;
 	height: max-content;
 	position: absolute;
 	top: 4rem;
